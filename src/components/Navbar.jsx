@@ -1,29 +1,34 @@
+
 import Link from "next/link";
 
-const menu = [
- { href: "/", label: "Beranda" },
- { href: "/tentang", label: "Tentang" },
- { href: "/proyek", label: "Proyek" },
- { href: "/kontak", label: "Kontak" },
-];
-
-export default function Navbar () {
+export default function Navbar() {
   return (
-    <harder className="bg-utama text-white">
-      <nav className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-betwen">
-        <Link href= "/" className="text-2xl font-bold">
+    <header className="bg-utama text-white">
+      <nav className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-between">
+        
+        <Link href="/" className="text-2xl font-bold">
           Laila Nur Abidah
         </Link>
-        <ul className="flex flex-wrap gap-x-5 gap-y-2">
-          {menu.map ((item) => (
-            <li key={item.href}>
-              <Link href={item.href} className="text-gray-200 hover:text-white">
-                {item.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+
+        <div className="flex flex-wrap gap-4">
+          <Link href="/" className="hover:underline">
+            Home
+          </Link>
+
+          <Link href="/tentang" className="hover:underline">
+            Tentang
+          </Link>
+
+          <Link href="/proyek" className="hover:underline">
+            Proyek
+          </Link>
+
+          <Link href="/kontak" className="hover:underline">
+            Kontak
+          </Link>
+        </div>
+
       </nav>
-    </harder>
+    </header>
   );
 }
