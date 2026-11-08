@@ -1,4 +1,5 @@
-import ContactForm from '../../components/ContactForm';
+
+import FormKontak from "../../components/FormKontak";
 
 export const metadata = {
   title: "Kontak | Laila Nur Abidah",
@@ -27,15 +28,14 @@ export default function KontakPage() {
       {/* FORM DAN INFORMASI KONTAK */}
       <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-[minmax(0,2fr)_minmax(10rem,1fr)] md:gap-5">
 
-        <ContactForm />
+        <FormKontak />
 
-        <aside className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+        <aside className="rounded-xl border border-slate-200 bg-white dark:bg-gray-800 p-5 shadow-sm md:p-6">
           <h2 className="text-xl font-bold text-slate-900">
             Temukan Saya di
           </h2>
 
           <ul className="mt-3 space-y-3">
-
             {/* GITHUB */}
             <li>
               <a
@@ -57,7 +57,6 @@ export default function KontakPage() {
                 emailkamu@gmail.com
               </a>
             </li>
-
           </ul>
         </aside>
 

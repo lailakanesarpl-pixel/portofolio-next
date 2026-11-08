@@ -55,7 +55,7 @@ export default function Tentang() {
 
       {/* JUDUL */}
       <header className="mb-8">
-        <h1 className="text-3xl font-bold text-utama md:text-4xl">
+        <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">
           Tentang Saya
         </h1>
 
@@ -65,14 +65,14 @@ export default function Tentang() {
       </header>
 
       {/* PERKENALAN */}
-      <section className="rounded-2xl bg-white p-6 shadow-sm">
-        <h2 className="mb-4 text-xl font-bold text-utama">
+      <section className="rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-sm">
+        <h2 className="mb-4 text-xl font-bold text-utama dark:text-sky-200">
           Perkenalan
         </h2>
 
         <p className="leading-7 text-slate-600">
           Halo, saya{" "}
-          <span className="font-semibold text-utama">
+          <span className="font-semibold text-utama dark:text-sky-200">
             Laila Nur Abidah
           </span>
           . Saya adalah siswa SMK jurusan Rekayasa Perangkat Lunak (RPL)
@@ -91,8 +91,8 @@ export default function Tentang() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
 
         {/* HOBI */}
-        <section className="rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="mb-4 text-xl font-bold text-utama">
+        <section className="rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-bold text-utama dark:text-sky-200">
             Hobi
           </h2>
 
@@ -104,14 +104,14 @@ export default function Tentang() {
         </section>
 
         {/* CITA-CITA */}
-        <section className="rounded-2xl bg-white p-6 shadow-sm">
-          <h2 className="mb-4 text-xl font-bold text-utama">
+        <section className="rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-bold text-utama dark:text-sky-200">
             Cita-cita
           </h2>
 
           <p className="mb-3 text-slate-600">
             Saya ingin menjadi{" "}
-            <span className="font-bold text-utama">
+            <span className="font-bold text-utama dark:text-sky-200">
               Junior Web Developer
             </span>
             .
@@ -128,9 +128,9 @@ export default function Tentang() {
       </div>
 
       {/* KEMAMPUAN */}
-      <section className="rounded-2xl bg-white p-6 shadow-sm">
+      <section className="rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-sm">
 
-        <h2 className="mb-4 text-2xl font-bold text-utama">
+        <h2 className="mb-4 text-2xl font-bold text-utama dark:text-sky-200">
           Kemampuan
         </h2>
 
@@ -146,7 +146,7 @@ export default function Tentang() {
               key={item.nama}
               className="rounded-xl border border-slate-100 p-5 transition hover:-translate-y-1 hover:shadow-md"
             >
-              <h3 className="font-bold text-utama">
+              <h3 className="font-bold text-utama dark:text-sky-200">
                 {item.nama}
               </h3>
 
@@ -160,9 +160,9 @@ export default function Tentang() {
       </section>
 
       {/* JADWAL BELAJAR */}
-      <section className="rounded-2xl bg-white p-6 shadow-sm">
+      <section className="rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-sm">
 
-        <h2 className="mb-4 text-xl font-bold text-utama">
+        <h2 className="mb-4 text-xl font-bold text-utama dark:text-sky-200">
           Jadwal Belajar
         </h2>
 

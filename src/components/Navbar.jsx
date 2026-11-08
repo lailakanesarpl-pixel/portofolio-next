@@ -1,11 +1,13 @@
 
+"use client";
+
 import Link from "next/link";
+import TombolTema from "./TombolTema";
 
 export default function Navbar() {
   return (
     <header className="bg-utama text-white">
       <nav className="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-4 md:flex-row md:items-center md:justify-between">
-        
         <Link href="/" className="text-2xl font-bold">
           Laila Nur Abidah
         </Link>
@@ -26,8 +28,9 @@ export default function Navbar() {
           <Link href="/kontak" className="hover:underline">
             Kontak
           </Link>
-        </div>
 
+          <TombolTema />
+        </div>
       </nav>
     </header>
   );
