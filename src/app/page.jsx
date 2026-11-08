@@ -1,6 +1,8 @@
 
+import Link from "next/link";
 import Hero from "../components/Hero";
 import SkillCard from "../components/SkillCard";
+import proyek from "../data/proyek";
 
 const skills = [
   { nama: "HTML", level: "Menengah" },
@@ -12,114 +14,116 @@ const skills = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f0fdf4] p-6 text-slate-800 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 md:p-12">
-      <div className="mx-auto max-w-4xl space-y-8">
+    <main className="min-h-screen bg-[#f1faee] px-5 py-10 text-slate-800 transition-colors duration-300 dark:bg-gray-900 dark:text-gray-100 md:px-8">
+      <div className="mx-auto max-w-5xl space-y-14">
 
-        {/* Hero / Profil */}
-        <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+        {/* HERO */}
+        <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800 md:p-10">
           <Hero
             nama="Laila Nur Abidah"
             tagline="Siswa kelas X SMK, calon Junior Web Developer di Kelas Industri UBIG."
           />
-        </section>
 
-        {/* Tentang Saya */}
-        <section
-          id="tentang"
-          className="scroll-mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800"
-        >
-          <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-gray-100">
-            Tentang Saya
-          </h2>
-          <p className="leading-7 text-gray-700 dark:text-gray-300">
-            Saya senang mempelajari hal baru di dunia teknologi,
-            khususnya pengembangan website. Saya ingin terus meningkatkan
-            kemampuan agar bisa membuat website yang bermanfaat.
-          </p>
-        </section>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Link
+              href="/tentang"
+              className="rounded-lg bg-red-700 px-5 py-3 font-semibold text-white transition hover:bg-red-800"
+            >
+              Tentang Saya
+            </Link>
 
-        {/* Hobi dan Cita-cita */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-gray-100">
-              Hobi
-            </h2>
-            <ul className="list-inside list-disc space-y-2 text-gray-700 dark:text-gray-300">
-              <li>Dance</li>
-              <li>Menyanyi</li>
-              <li>Bermain Roblox</li>
-            </ul>
-          </section>
-
-          <section className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h2 className="mb-4 text-2xl font-bold text-slate-900 dark:text-gray-100">
-              Cita-cita
-            </h2>
-            <p className="mb-3 text-gray-700 dark:text-gray-300">
-              Menjadi Junior Web Developer. Langkah yang saya rencanakan:
-            </p>
-            <ol className="list-inside list-decimal space-y-2 text-gray-700 dark:text-gray-300">
-              <li>Menyelesaikan pembelajaran di kelas industri UBIG.</li>
-              <li>Magang di perusahaan teknologi.</li>
-              <li>Bekerja sebagai Web Developer.</li>
-            </ol>
-          </section>
-        </div>
-
-        {/* Keahlian */}
-        <section id="keahlian" className="scroll-mt-8">
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h2 className="mb-5 text-2xl font-bold text-slate-900 dark:text-gray-100">
-              Keahlian
-            </h2>
-
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {skills.map((skill) => (
-                <SkillCard
-                  key={skill.nama}
-                  nama={skill.nama}
-                  level={skill.level}
-                />
-              ))}
-            </div>
+            <Link
+              href="/tentang#keahlian"
+              className="rounded-lg border border-red-700 px-5 py-3 font-semibold text-red-700 transition hover:bg-red-700 hover:text-white dark:text-red-300"
+            >
+              Lihat Keahlian
+            </Link>
           </div>
         </section>
 
-        {/* Jadwal Belajar */}
+        {/* KEAHLIAN */}
         <section>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h2 className="mb-5 text-2xl font-bold text-slate-900 dark:text-gray-100">
-              Jadwal Belajar
-            </h2>
-
-            <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
-              <table className="w-full text-left">
-                <thead className="bg-slate-800 text-white">
-                  <tr>
-                    <th className="p-3">Hari</th>
-                    <th className="p-3">Waktu</th>
-                    <th className="p-3">Kegiatan</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200 text-gray-700 dark:divide-gray-700 dark:text-gray-300">
-                  <tr>
-                    <td className="p-3">Senin</td>
-                    <td className="p-3">19.00–20.00</td>
-                    <td className="p-3">Membaca ulang modul</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3">Selasa</td>
-                    <td className="p-3">19.00–21.00</td>
-                    <td className="p-3">Mengerjakan tugas praktik</td>
-                  </tr>
-                  <tr>
-                    <td className="p-3">Rabu</td>
-                    <td className="p-3">19.30–20.30</td>
-                    <td className="p-3">Membuat proyek website</td>
-                  </tr>
-                </tbody>
-              </table>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="font-semibold text-red-700 dark:text-red-400">
+                Kemampuan Saya
+              </p>
+              <h2 className="mt-1 text-3xl font-bold">
+                Keahlian
+              </h2>
             </div>
+
+            <Link
+              href="/tentang#keahlian"
+              className="font-semibold text-red-700 hover:underline dark:text-red-400"
+            >
+              Lihat semua keahlian →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {skills.map((skill) => (
+              <SkillCard
+                key={skill.nama}
+                nama={skill.nama}
+                level={skill.level}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* PROYEK TERBARU */}
+        <section>
+          <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <p className="font-semibold text-red-700 dark:text-red-400">
+                Hasil Karya
+              </p>
+              <h2 className="mt-1 text-3xl font-bold">
+                Proyek Terbaru
+              </h2>
+            </div>
+
+            <Link
+              href="/proyek"
+              className="font-semibold text-red-700 hover:underline dark:text-red-400"
+            >
+              Lihat semua proyek →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {proyek.slice(0, 3).map((item) => (
+              <article
+                key={item.slug}
+                className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
+              >
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-48 w-full object-cover"
+                  />
+                )}
+
+                <div className="p-5">
+                  <h3 className="text-xl font-bold">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-2 leading-6 text-gray-600 dark:text-gray-300">
+                    {item.description}
+                  </p>
+
+                  <Link
+                    href={`/proyek/${item.slug}`}
+                    className="mt-4 inline-block font-semibold text-red-700 hover:underline dark:text-red-400"
+                  >
+                    Lihat detail →
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
