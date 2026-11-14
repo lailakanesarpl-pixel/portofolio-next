@@ -38,3 +38,17 @@ dengan `now()` |
 
 
 RLS aktif tanpa policy, sehingga pengunjung tidak bisa membaca pesan. Policy `insert` dibuat di Minggu 15.
+
+
+## Tabel `skills`
+
+Daftar keahlian Laila Nur Abidah.
+
+| Kolom | Tipe | Keterangan |
+| --- | --- | --- |
+| `id` | `int8` | Primary key, nomor otomatis |
+| `created_at` | `timestamptz` | Waktu baris dibuat |
+| `nama` | `text` | Nama keahlian |
+| `level` | `text` | Tingkat keahlian |
+
+RLS aktif. Policy `Pengunjung boleh membaca keahlian`: peran `anon` boleh `select` semua baris.
